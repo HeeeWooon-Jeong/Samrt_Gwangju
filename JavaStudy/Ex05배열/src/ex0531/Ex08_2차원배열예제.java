@@ -14,16 +14,19 @@ public class Ex08_2차원배열예제 {
 
 		for (int j = 0; j < num.length; j++) {
 
-			if(j%2==0) {
-			for (int i = num[0].length-1; i >= 0; i--) {
-				num[j][i] = count++;
+			if (j % 2 == 0) {
+				for (int i = num[0].length - 1; i >= 0; i--) {
+					num[j][i] = count++;
+				}
 			} else {
+
+				for (int i = 0; i < num[0].length; i++) {
+					num[j][i] = count++;
+				}
+			}
 			
-			for (int i = 0; i < num[0].length; i++) {
-				num[j][i] = count++;
-			}		
-			}
-			}
+			
 		}
-			
-	
+	}
+
+}

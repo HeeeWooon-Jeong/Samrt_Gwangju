@@ -6,33 +6,29 @@ public class 보너스6 {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-
-		int[] arr = new int[5];
-		int cnt = 1;
-
-		for (int i = 0; i < 5; i++) {
-			System.out.print(cnt + "번째 수 입력 : ");
-			arr[i] = sc.nextInt();
-			cnt++;
-		}
-
-		for (int i = 0; i < arr.length - 1; i++) {
-			for (int j = 0; j < arr.length - i - 1; j++) {
-				if (arr[j] > arr[j + 1]) {
-					// 두 요소를 교환
-					int change = arr[j];
-					arr[j] = arr[j + 1];
-					arr[j + 1] = change;
-				}
-			}
-
-		}
-		System.out.println("정렬 후");
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
-		System.out.println();
+		int base = 2;
+		int n = 0;
+		int result = powerN(base, n);
+		System.out.println("결과 확인 : " + result);
 
 	}
+
+	public static int powerN(int a, int b) {
+	    int result = a;
+
+	    if(b == 1) {
+	    	result = a;
+	    	
+	    } else if(b==0) {
+	    	result = 1;
+	    
+	    } else {
+	        for (int i = 1; i < b; i++) {
+	            result *= a;
+	        }
+	    }
+
+	    return result;
+	}
+
 }

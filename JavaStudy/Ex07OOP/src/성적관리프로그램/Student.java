@@ -57,7 +57,6 @@ public class Student {
 	}
 
 
-
 	//getter 메소드
 	// : 필드에 있는 데이터를 가져갈 수 있는 메소드
 	

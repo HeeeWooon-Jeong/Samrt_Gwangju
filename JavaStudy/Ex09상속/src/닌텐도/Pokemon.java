@@ -1,4 +1,4 @@
-package 닌텐도;
+package   닌텐도;
 
 public class Pokemon extends Game {
 	

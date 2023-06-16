@@ -60,13 +60,17 @@ public class MemberSystem {
 				int select = sc.nextInt();
 				System.out.print("ID를 입력해주세요.");
 				String id = sc.next();
+				
 				update(id, select);
+				
 				if(result > 0) {
 					System.out.println("변경되었습니다.");
 				}
 				else {
 					System.out.println("변경되지 않았습니다.");
 				}
+				
+				
 				
 			} else if (choice == 4) {
 				// 회원탈퇴 기능 -> delete
@@ -80,16 +84,14 @@ public class MemberSystem {
 				else {
 					System.out.println("삭제되지 않았습니다.");
 				}
-				
 			} else if (choice == 5) {
 				System.out.println("감사합니다. 종료되었습니다.");
 				break;
 			} else {
 				System.out.println("잘못된 선택입니다...!");
 			}
+			}
 		} // while끝
-
-	}// main 끝
 
 	//----------------------------------------------------------------------------------------
 	// 모든 기능들이 공통적으로 사용하는 getCon(), Close() 생성
@@ -225,8 +227,8 @@ public class MemberSystem {
 	public static int delete(String id, String pw) {
 		getCon();
 
+		String sql = "DELETE FROM MEMBER WHERE ID = ? AND PW = ?";
 		try {
-			String sql = "DELETE FROM MEMBER WHERE ID = ? AND PW = ?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);

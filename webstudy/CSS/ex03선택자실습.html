@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        *{
+            color: blue;
+        }
+
+        p{
+            color: red;
+        }
+
+/* Class 
+    . 으로 적용
+    .food */
+
+        .food{
+            color: yellow;
+        }
+
+/*  id
+    # 으로 적용
+    #burger 
+    id는 고유 값이라 한개의 요소에 하나만 지정 가능*/
+        
+        #burger{
+            color: green;
+        }
+    /* 그룹 선택자 */
+    /* ,로 구분해서 여러 개를 선택할 수 있다 */
+        .food, #burger{
+            background-color: blanchedalmond;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS 활용하기</h1>
+    <p>오늘의 점심 메뉴</p>
+    <ul>
+        <li class="food" id="burger">햄버거🍔🍔</li>
+        <li class="food">도시락🍱</li>
+        <li class="food">육회비빔밥🥩</li>
+    </ul>
+
+
+
+</body>
+</html>

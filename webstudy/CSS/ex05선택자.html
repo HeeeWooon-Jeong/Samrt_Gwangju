@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        /* <!-- 계층 선택자 --> */
+
+/* <!-- 자손 선택자  */
+     /* 기호 : 띄어쓰기  */
+     /* div를 기준으로 자손인 span의 색을 tomato
+        div를 기준으로 자손인 li 색을 blue */
+
+    div span{
+        color: tomato;
+    }
+    div li{
+        color: blue;
+    }
+
+/* <!-- 자식 선택자 --> */
+     /* 기호 : > */
+    /* ol 을 기준으로 자식인 span의 색을 hotpink */
+
+    ol>span{
+        color: hotpink
+    }
+
+/* <!-- 근접 후행선택자 --> */
+     /* 기호 : + */
+     /* li를 기준으로 근접해서 뒤로 따라오는 li의 색을 green */
+    
+    li+li{
+        color: green
+    }
+
+/* <!-- 후행 선택자 --> */
+     /* li를 기준으로 형제관계인 li 색을 lime */
+
+    li~li{
+        color: lime
+    }
+
+    /* rule이라는 클래스 중. strong 태그에 해당하는 것만 바꿀래! */
+    /* strong 태그인데  클래스가 rule */
+    strong.rule{
+        color: yellow;
+    }
+    strong{
+        color: red;
+    }
+
+
+
+</style>
+</head>
+<body>
+    <div> 
+        
+        <strong class="rule">나만의 간장계란밥 레시피! </strong> 
+        <ol>
+            <li>계란을 안 뒤집고 굽는다</li>
+            <li>밥에 간장이랑 참기름을 넣ㄴ느다</li>
+            <span>(짜게 만들어지지 않도록 주의할 것)</span>
+            <li>계란을 넣고 깨를 왕창뿌린다</li>
+        </ol>
+    </div>
+
+
+</body>
+</html>

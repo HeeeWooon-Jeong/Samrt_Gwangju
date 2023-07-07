@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 실습2</title>
+    <style>
+        ul{
+            color: blue;
+        }
+
+        .b{
+            color: red;
+        }
+
+        body span{
+            color: aqua;
+        }
+
+        /* 우선순위 뒤쳐져 적용 안됨 */
+        body li{
+            color: black;
+        }
+
+        ol>span{
+            color: chocolate;
+        }
+
+        /* 첫째 li 바로옆의 li 선택 */
+        li + li {
+            color: blue;
+        }
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <!-- 접었다 폈다 할수 있는 기능 -->
+    <details>
+        <!-- 미리보기 역할 -->
+        <summary>지금까지 배운 내용</summary>
+        <ul>
+            <li class="a">Java</li>
+            <li class="a">SQL</li>
+            <li class="a">HTML</li>
+        </ul>
+    </details>
+
+    <strong>지켜야할 내용</strong>
+
+    <ol>
+        <li class="b">지각하지 않기</li>
+        <li class="b">결석하지 않기</li>
+            <span>(불가피 할 땐 꼭 담임쌤에게 미리 말하기)</span>
+        <li class="b">쉬는시간 철저히 지키기</li>
+    </ol>
+</body>
+</html>

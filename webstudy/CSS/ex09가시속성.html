@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #grayB {
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+      }
+
+      #yellowB {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+
+      #greenB {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+      }
+
+      /* 가시속성 : visibility */
+      /* 1. visibility : visible */
+      /* - 요소를 보이게 지정 */
+
+    
+      /* 1. visibility : hidden */
+      /* - 요소를 보이지 않게 지정 */
+    #yellowB{
+        /* 눈에는 보이지 않지만 자리는 그대로 남겨져있음 */
+        visibility: hidden;
+
+        /* 눈에도 보이지 않고 자리도 없어짐 */
+        display: none;
+        
+    }
+    
+    </style>
+  </head>
+  <body>
+    <div id="grayB">
+        <p>회색 박스 안</p>
+
+        <div id="yellowB">
+            (노란박스)
+        </div>
+
+        <div id="greenB">
+            (초록박스)
+        </div>
+    </div>
+
+  </body>
+
+
+</html>

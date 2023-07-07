@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            /* background-color: violet; */
+            border: 1px solid black;
+            padding: 30px;
+            margin: 10px;
+
+            /* padding */
+            /* 테두리를 기준으로 안쪽의 여백을 지정하는 속성 */
+            /* == 테두리와 내용 사이의 여백 */
+            /* ==> 마치 크기가 커진 것처럼 보인다. */
+
+            /* box-sizing : 요소의 크기를 화면에 표시하는 방식 */
+            /* content- box [디폴트] */
+            /* 내가 설정한 너비 = 컨텐츠의 크기 */
+            /* 컨텐츠의 영역만큼 다 크기로 삼어버리는 속성 */
+            /* => padding, border값이 들어가면 그만큼 커져버림 */
+
+            /* border-box */
+            /* 내가 설정한 너비 = border 안쪽까지!!! */
+            /* ex) content + padding + border = 내가 설정한 너비 */
+            /* ==> padding, border값이 들어가도 크기가 커지는게 아니라  */
+            /* 컨텐츠가 작아진다 */
+
+            box-sizing: border-box;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <span>비도오고배고프고퇴근하고싶어요
+        금요일이니까 신나요!
+        비도오고배고프고퇴근하고싶어요
+        금요일이니까 신나요!
+        </span>
+    </div>
+    <div id="box">
+        <span>비도오고배고프고퇴근하고싶어요
+        금요일이니까 신나요!
+        비도오고배고프고퇴근하고싶어요
+        금요일이니까 신나요!
+        </span>
+    </div>
+
+</body>
+</html>

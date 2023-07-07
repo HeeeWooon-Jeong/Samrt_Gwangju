@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 입력 양식 지정 form 태그 -->
+    <!-- action : form태그 안에 있는 데이터들을 전달하는 url 지정 -->
+    <form action="#">
+      <h1 class="title">로그인</h1>
+      <!-- placeholder      아무것도 입력하지 않았을때 띄워줄 디폴드 텍스트 -->
+      <!-- value            기본적으로 입력 해놓을 값 -->
+      <!-- maxlength        최대로 입력 가능한 길이를 제한함 -->
+      <!-- autofocus        웹에 진입할때 바로 커서가 가있게 되는 기능 -->
+      <!-- readonly         입력 불가능 읽기만 가능 -->
+
+      <div>
+        <label class="label-width" for="user-id">아이디</label>
+        <input type="text" id="user-id" name="userId" />
+      </div>
+
+      <div>
+        <label class="label-width" for="user-pw">비밀번호</label>
+        <input type="password" id="user-pw" name="userPw" />
+      </div>
+
+      <br />
+      <!-- 파일 업로드 태그 -->
+      <input type="file" />
+      <!-- 색깔 선택 태그 -->
+      <input type="color" />
+      <br />
+      <!-- 날자 선택 태그 -->
+      <!-- 년, 월, 일 선택 태그 -->
+      <input type="date" />
+      <br />
+      <input type="text" />
+      <!-- 시간 까지 선택 태그 -->
+      <input type="datetime-local" />
+      <br />
+      <!-- 중복 선택이 가능할 때 사용하는 태그 -->
+      초밥🍣 <input type="checkbox" /> 치킨🍗 <input type="checkbox" /> 피자🍕
+      <input type="checkbox" />
+      <br />
+        <!-- radio버튼을 사용할 때는 중복으로 선택이 되는 것을 방지하기 위해 
+        name arttribute를 사용 ** 동일한 값을 넣어주면 중복선택을 방지 -->
+        <!-- value로 보낼 값을 선택 -->
+      남자<input type="radio" name="gender" value="남자"/> 
+      여자<input type="radio" name="gender" value="여자"/>
+      
+      <br>
+      <!-- 범위를 설정하는 태그 -->
+      <input type="range">
+      <br>
+      <!-- 숫자값을 입력하는 태그 -->
+      <input type="number">
+      <br>
+      <!-- 리스트 형태로 데이터를 출력해주는 태그 -->
+      <!-- 
+          1) datalist 사용하는 방법
+          2) select 사용하는 방법
+          * datalist 입력이 가능
+          * select는 입력이 불가능
+       -->
+      <input type="text" list="song">
+      
+      <datalist id="song">
+        <option value="이브, 프시케 그리고 푸른수염의 아내"></option>
+        <option value="너의 모든 순간"></option>
+        <option value="그라데이션"></option>
+      </datalist>
+      <br>
+      <select name="" id="">
+        <option value="">Java</option>
+        <option value="">DB</option>
+        <option value="">Python</option>
+        <option value="">정처기특강</option>
+        <option value="">Html</option>
+      </select>
+
+      <!-- 적을수있는 행과 열 -->
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <textarea cols="30" rows="10"></textarea>
+
+      <br>
+      <!-- 값 초기화 시키는 태그 -->
+      <input type="reset"> 
+      <!-- 입력한 데이터를 특정 주소로 제출하는 태그 -->
+      <input type="submit">
+
+
+
+
+      <!--  -->
+
+    </form>
+  </body>
+</html>

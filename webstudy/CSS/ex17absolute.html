@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  z-index : 요소의 쌓이는 순서를 지정하는 방법(특정 값을 가지고 있지 않다)
+        : 더 큰수를 가진 요소를 위로 올려준다
+        : static 일 때는 사용할 수 없다.
+         */
+
+        div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border: black solid 1px;
+            text-align: center;
+            line-height: 100px;
+        }
+        #f1{
+            background-color: aqua;
+        }
+        #f2{
+            background-color: violet;
+            top: 50px;
+        }
+        #f3{
+            background-color: blue;
+            top:  100px
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+        <div id="f1">child</div>
+        <div id="f2">child</div>
+        <div id="f3">child</div>
+</body>
+</html>

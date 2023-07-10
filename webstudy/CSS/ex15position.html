@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        #violet{
+            background-color: violet;
+        }
+        #yellow{
+            background-color: yellow;
+            /* position  기준은 왼쪽 */
+            /* 왼쪽부터 얼마나 옮길지 */
+            left: 100px;
+            position: relative;
+            /* position속성
+            : 태그를 자유롭게 배치하도록 도와주는 속성 
+            1) static(기본값)
+            : 태그를 순서대로 배치하는 값(요소이동 불가능) 
+
+            2) relative 
+            : static 위치를 기준으로 내가 원하는 곳으로 이동 할 수 있게 함
+            : top / left / bottom / right 이동 가능!
+            
+            */
+
+            
+            
+        }
+        #blue{
+            background-color: blue;
+            left: 50px;
+            bottom: 50px;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="violet"></div>
+    <div id="yellow"></div>
+    <div id="blue"></div>
+</body>
+</html>

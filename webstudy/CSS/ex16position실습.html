@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .in{
+            width: 100px;
+            height: 100px;
+        }
+        #div1{
+            background-color: aqua;
+            /* position: absolute; */
+
+        }
+        #div2{
+            background-color: navy;
+            position: absolute;
+            left: 100px;
+        }
+        #div3{
+            background-color: wheat;
+            /* absolute 
+            : static 가지고 있지 않은 부모 요소를 기준으로 움직이는 값
+            : 만약에 부모요소 중에서 relative / absolute / fixed 값을 
+            가지고 있는 요소가 없다면 body태그 기준으로 움직인다
+                부모태그의 위치기준  */
+            position: absolute;
+            top: 10px;
+        }
+
+        #back{
+            border: 10px solid red;
+            position: relative;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="back">
+        <div id="div1" class="in"></div>
+        <div id="div2" class="in"></div>
+        <div id="div3" class="in"></div>
+    </div>
+</body>
+</html>

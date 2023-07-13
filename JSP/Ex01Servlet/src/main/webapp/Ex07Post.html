@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  <!-- Post 양식으로 전송 -->
+    <form action="ex07" method="post">
+      <h1 class="title">로그인</h1>
+
+	<!-- readonly 제출할때 값이 전송 됨   	-  	수정불가
+		 disabled 제출할때 값이 전송이 안됨	-	사용불가
+		   둘다 input박스 안에 입력이 불가능하게 만듦
+		    -->
+      <div>
+        <label class="label-width" for="user-id">아이디</label>
+        <input type="text" id="user-id" name="userId" />
+      </div>
+
+      <div>
+        <label class="label-width" for="user-pw">비밀번호</label>
+        <input type="password" id="user-pw" name="pw" />
+      </div>
+
+      <br />
+      <input type="file" name="file"/>
+      <input type="color" name="color"/>
+      <br />
+      <input type="date" name="date"/>
+      <br />
+      <input type="text" />
+      <input type="datetime-local" name="datetime"/>
+      <br />
+      <!-- checkbox
+      	   request.getParameterValues("name")
+      	   name 이름으로 전달 된 모든 데이터를 가죠옴 -->
+      	   
+      초밥🍣 <input type="checkbox" name = "food" value="초밥"/> 
+      치킨🍗 <input type="checkbox" name = "food" value="치킨"/> 
+      피자🍕 <input type="checkbox" name = "food" value="피자"/>
+      
+      
+      <!-- 라디오박스 
+      체크한 데이터가 서버로 전달-->
+      
+      <br />
+      남자<input type="radio" name="gender" value="남자"/> 
+      여자<input type="radio" name="gender" value="여자"/>
+      
+      <br>
+      <!-- 범위를 설정하는 태그 -->
+      <input type="range" name = "range">
+      <br>
+      <!-- 숫자값을 입력하는 태그 -->
+      <input type="number" name = "number">
+      <br>
+      <!-- 리스트 형태로 데이터를 출력해주는 태그 -->
+      <!-- 
+          1) datalist 사용하는 방법
+          2) select 사용하는 방법
+          * datalist 입력이 가능
+          * select는 입력이 불가능
+       -->
+      <input type="text" list="song" name = "songlist">
+      
+      <datalist id="song" name=>
+        <option value="이브, 프시케 그리고 푸른수염의 아내"></option>
+        <option value="너의 모든 순간"></option>
+        <option value="그라데이션"></option>
+      </datalist>
+      <br>
+      <!-- option 태그의 value 속성값이 실제로 보내지는 데이터를 의미한다.
+      	   value 속성이 없는경우 >> 옵션 태그 사이의 값이 전송된다.
+      	    -->
+      
+      <select name="class" id="">
+        <option >Java</option>
+        <option >DB</option>
+        <!-- <option>DB</option> -->
+        <option >Python</option>
+        <option >정처기특강</option>
+        <option >Html</option>
+      </select>
+	
+	<!--  여러줄의 텍스트를 입력할수 있는 영역
+	사이즈가 큰 input >> name값이 있어야 데이터가 전달가능--> 
+      <!-- 적을수있는 행과 열 -->
+      <textarea name="text" id="" cols="30" rows="10"></textarea>
+      <textarea cols="30" rows="10"></textarea>
+      
+      <br>
+      <!-- 값 초기화 시키는 태그 -->
+      <input type="reset"> 
+      <!-- 입력한 데이터를 특정 주소로 제출하는 태그 -->
+      <input type="submit">
+      
+      
+      <p style="border: 1px solid black;"> 입력받은 데이터 : " + data + "</p>
+     
+
+      <!--  -->
+
+    </form>
+  </body>
+</html>
+
+<input type="number"> <br>

@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 	@WebServlet("/ex01") // URLMapping 지정
 public class Ex01Servlet extends HttpServlet{
+	//	http://localhost:8081/Ex01Servlet/ex01 	
+		
 	// Servlet : 요청받았을 때 server상에서 실행되는 java 프로그램
 	// 			 HttpSevlet 클래스를 상속 받아서 구현 
 	//			 통일성 / 생산성을 위해 상속 사용

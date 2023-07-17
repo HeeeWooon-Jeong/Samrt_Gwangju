@@ -83,6 +83,10 @@ public class Ex07Post extends HttpServlet {
     			String f= food[i];
     		}
     		
+    		for(int = 0; i<5; i++) {
+    			
+    		}
+    		
     		
     	out.print("<p>radio : "+gender+"</p>");
     	out.print("<p>color : "+color+"</p>");

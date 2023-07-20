@@ -25,7 +25,7 @@
 	
 	<h4>랜덤당첨작성</h4>
 	
-	<form action="">
+	<form action="Ex11result.jsp">
 	
 		주제: <input type="text" name="sub"> <br>
 		<% for(int i =1; i<=num; i++){ %>

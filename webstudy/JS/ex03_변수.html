@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 변수 : 데이터를 담을 수 있는 공간
+        
+        // 변수선언방법
+        // 자바) 자료형 변수이름 = 값;
+        // 자스) var 변수이름 = 값;
+
+        // 변수 키워드
+        // var  : 재선언 가능 / 재할당 가능
+        // let  : 재선언 불가능 / 재할당 가능
+        // const: 재선언 불가능 / 재할당 불가능
+        var me = "희운";
+        var me = "진구"
+        console.log(me);
+
+        let me2 = "미리"
+        me2 = "현중"
+        console.log(me2);
+
+        // const활용 = html객체 저장, 클래스 정의, 함수 정의
+        
+
+
+
+        // 자바스크립트 변수의 특징
+        // var, let, const로 선언
+        
+        // 자료형
+
+        // - string, number, boolean, undefined, null
+        // - 위 5가지를 제외한 타입은 Object(객체) 타입
+        let str = "hello";
+        let str1 = 'hello';
+        let num1 = 5;
+        let num2 = 3.14;
+        let bool = true;
+
+        // 1.string(문자 형태)
+        // 큰따옴표, 작은따옴표, 백틱 전부 사용 가능
+        let name = "정희운";
+        console.log('name : ', name);
+        console.log("name의 자료형: ",typeof(name));
+
+        // 자료형을 구별하는 방법
+        // 1. typeof()
+        // 2. console 창의 색깔
+
+        // 3. number(숫자 형태)
+        let number1 = 3;
+        let number2 = 3.14;
+
+        console.log("number1은 : ", number1, "자료형은 ", typeof(number1));
+        console.log("number1은 : ", number2, "자료형은 ", typeof(number2));
+
+        // 4. boolean
+        let check = false;
+        console.log("check : ", check);
+
+        // null과 undefined 의 공통된 의미
+        // - 둘다 값이 비어있다.
+        
+        // 다른점
+        // null - 비어있다
+        // undefined - 타입이 정해져있지 않다.
+        // 개발자들이 값이 비어있다는걸 비교하는 용도로 활용
+        let empty = null;   // null 타입
+        let data;           // undefined타입 
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

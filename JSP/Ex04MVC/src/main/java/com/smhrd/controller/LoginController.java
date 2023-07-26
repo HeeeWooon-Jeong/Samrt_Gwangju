@@ -6,15 +6,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.smhrd.dao.MemberDAO;
 import com.smhrd.entity.Member;
 
 /**
- * Servlet implementation class JoinController
+ * Servlet implementation class LoginController
  */
-@WebServlet("/join")
-public class JoinController extends HttpServlet {
+
+			// 1. 설정
+@WebServlet("/Login")
+public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -23,37 +26,41 @@ public class JoinController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		// 1. 데이터수집
-		
+		// 2. 데이터 수집
 		request.setCharacterEncoding("UTF-8");
 		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		String gender = request.getParameter("gender");
-		String nick = request.getParameter("nick");
-		String tel = request.getParameter("tel");
 		
-		// id ~ tell까지 Member로 묶기
-		Member member = new Member(id, pw, gender, nick, tel);
+		Member member = new Member();
+		member.setId(id);
+		member.setPw(pw);
 		
-		// 2. 기능 실행
-		// 입력받은 정보를 DB-MEMBER 테이블에 저장 >> DAO
-		// DAO의 기능을 실행
+		// 3. 기능 실행
+		
+		// id와 pw가 일치하는지 MEMBER 테이블을 조회하는 기능
 		MemberDAO dao = new MemberDAO();
-		int cnt = dao.join(member);
+		Member result = dao.login(member);
 		
-		
-		// 3. View 선택
-		// 만약 회원가입이 성공했다면, main.jsp로, 실패했다면 join.jsp
-		String url = ""; 
-		if( cnt > 0 ) {
-			// 이미 이동하는 Controller가 있는 jsp의 경우 해당 Controller로 이동
-			url = "goMain";
+		if( result != null) {
+			System.out.println("로그인 성공");
+			
+			// 사용자의 정보를 유지할 수 있게끔 저장 >> session에 정보저장
+			HttpSession session = request.getSession();
+			session.setAttribute("user", result);
+			
+			
+			
+			
+			
 		}else {
-			url = "goJoin";
+			System.out.println("로그인 실패");
 		}
 		
+		// 4. View 선택
+		String url = "goMain";
 		response.sendRedirect(url);
+		
 		
 		
 		

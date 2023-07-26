@@ -9,7 +9,7 @@ import com.smhrd.entity.Member;
 public class MemberDAO {
 
 	// 1. SqlSessionManager의 sqlSessionFactory 받아오기
-	
+	// DBCP = SqlSessionFactory 
 	private SqlSessionFactory factory= SqlSessionManager.getSqlSessionFactory();
 	
 	
@@ -37,7 +37,22 @@ public class MemberDAO {
 		
 	}
 	
-	
+	// 로그인 메서드
+	public Member login( Member member ) {
+		// 1. 연결 빌려오기
+		SqlSession session = factory.openSession(true);
+		// 2. sql문 실행
+		// selectOne : 결과가 한개만 나올 때
+		//			   >> resultType에 적은 DTO로 리턴
+		// selectAll : 결과가 여러개 나올 때
+		//			   >> List<DTO>
+		
+		Member result = session.selectOne("login", member);
+		// 3. 연결 반납
+		session.close();
+		// 4. 실행 결과 리턴
+		return result;
+	}
 	
 	
 	

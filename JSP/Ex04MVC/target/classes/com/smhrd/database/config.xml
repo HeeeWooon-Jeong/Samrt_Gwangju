@@ -3,6 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+<!-- MY BATIS 에서 복사해서 가져옴 -->
 <!-- db.properties파일의 값들을 가져와서 사용하겠다.  -->
 <!-- Class가 아닌 일반파일 작성할 때, 폴더 방식으로 작성해야한다 -->
 	<properties resource="com/smhrd/database/db.properties"></properties>

@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.entity.Member"%>
+<%@page import="com.smhrd.dao.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,6 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+		// session에서 사용자정보를 꺼내기
+		Member user = (Member)session.getAttribute("user");
+	%>
 	
 	<h1>회원관리 프로그램</h1>
 	
@@ -16,9 +22,19 @@
 	URLMapping : goJoin
 	Controller Class 명 : GoJoinController
 	 --%>
+	 
+	 
+	 <%-- 로그인 성공시, 로그아웃, 회원정보, 회원탈퇴, 회원목록 --%>
+	 	<% if(user == null){ %>
 		<li> <a href="goJoin">회원가입</a> </li>
-		<li> <a href="#">로그인</a> </li>
-	
+		<li> <a href="goLogin">로그인</a> </li>
+		<% }else{%>
+		<li> <a href="logout">로그아웃</a> </li>
+		<li> <a href="#">회원정보수정</a> </li>
+		<li> <a href="#">회원탈퇴</a> </li>
+		<li> <a href="#">회원목록</a> </li>
+		<% }%>
+		
 	</ul>
 	
 </body>

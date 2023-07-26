@@ -36,4 +36,24 @@
 	 	)
 	 </insert>
 
+	<!--  
+		Login
+		
+		select 필수 속성
+		resultType : 조회결과를 어떤 데이터 타입으로 변환해서 받을지(한 행 기준)
+					 MyBatis에서는 조회결과를 자동으로 변환
+					 
+					 
+					 결과 1개 >> DTO 
+					 결과 여러개 >> List<DTO>
+					 조건)
+					 	1. table column명 == DTO 필드 변수명이 같아야만 한다
+					 	2. DTO에 기본생성자가 존재해야함
+					 	3. setter 메서드가 존재해야함
+	 -->
+	<select id="login" parameterType="com.smhrd.entity.Member" resultType="com.smhrd.entity.Member">
+		select * from MEMBER
+		where id = #{id}
+		and pw = #{pw}
+	</select>
 </mapper>

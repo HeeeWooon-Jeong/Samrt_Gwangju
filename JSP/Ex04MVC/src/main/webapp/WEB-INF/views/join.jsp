@@ -14,8 +14,8 @@
 	<form action="join" method="post">
 		ID : <input type="text" name="id"> <br>
 		pw : <input type="password" name="pw"> <br>
-		gender : 남 <input type="ladio" name="gender" value="남">  
-				 여 <input type="ladio" name="gender" value="여"> <br>
+		GENDER : 남 <input type="radio" name="gender" value="남">  
+				 여 <input type="radio" name="gender" value="여"> <br>
 				 
 		NICK : <input type="text" name="nick"> <br>
 		TEL : <input type="tel" name="tel"> <br>

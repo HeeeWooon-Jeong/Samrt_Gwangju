@@ -16,101 +16,109 @@
         // 1. 두 정수를 입력받기
         // 2. 전달받은 두 정수를 더한 결과 반환
         // 3. 반환된 결과를 다시 변수에 담은 후 출력
-        const addNumber = function(n1, n2){
-            return n1+n2
-        }
+
+
+        
+        // const addNumber = function(n1, n2){
+        //     return n1+n2
+        // }
         
         let result = addNumber(n1, n2)
         console.log('함수 선언 : '+ n1+n2)
 
-
-        function addNumber1(n1, n2) {
-            return n1 + n2
-        }
+        // 함수 표현식
+        // const addNumber1 = function(n1, n2){
+        //  retrun n1 + n2;
+        //}
 
         addNumber1()
 
-        const addNumber2 = function(n1, n2) {
-            console.log('함수표현식 : '+ n1+n2);
-        } 
+        // 함수 선언문
+        function addNumber2(n1, n2) {
+            return n1 + n2
+        }
 
         addNumber2()
 
-        const addNumber3 = (n1, n2) => {
-            console.log('화살표함수 : '+ n1+n2);
-        }
+
+        // 화살표 함수
+        let addNumber3 = (n1, n2) => {return n1 + n2}
 
         addNumber3()
 
+       
+
+       
 
 
-        // 현중
- // 두 정수를 입력받은 후 합을 반환하는 addNumber()
 
-        // 1. 두정수를 입력받기
-        let num1 = prompt("정수입력")
-        let num2 = prompt("정수입력")
-        let num3 = parseInt(num1)+parseInt(num2)
-        // 2. 전달받은 두 정수를 더한 결과 반환
-        const addNumber = (num3) =>{
-            console.log("두 정수를 더한결과",num3);
-        }
-        addNumber(num3)
-        3. 반환된 결과를 다시 변수에 담은후 출력
+//         // 현중
+//  // 두 정수를 입력받은 후 합을 반환하는 addNumber()
+
+//         // 1. 두정수를 입력받기
+//         let num1 = prompt("정수입력")
+//         let num2 = prompt("정수입력")
+//         let num3 = parseInt(num1)+parseInt(num2)
+//         // 2. 전달받은 두 정수를 더한 결과 반환
+//         const addNumber = (num3) =>{
+//             console.log("두 정수를 더한결과",num3);
+//         }
+//         addNumber(num3)
+//         3. 반환된 결과를 다시 변수에 담은후 출력
 
 
-        let num1 = parseInt(prompt('첫번째 숫자 입력'))
-        let num2 = parseInt(prompt('두번째 숫자 입력'))
-        // 1. 두 정수를 입력받기
-        // 2. 전달받은 두 정수를 더한 결과 반환
-        // 3. 반환된 결과를 다시 변수에 담은 후 출력
-        const addNumber = function(n1, n2){
-            return n1+n2
-        }
+//         let num1 = parseInt(prompt('첫번째 숫자 입력'))
+//         let num2 = parseInt(prompt('두번째 숫자 입력'))
+//         // 1. 두 정수를 입력받기
+//         // 2. 전달받은 두 정수를 더한 결과 반환
+//         // 3. 반환된 결과를 다시 변수에 담은 후 출력
+//         const addNumber = function(n1, n2){
+//             return n1+n2
+//         }
 
-        let result = addNumber(n1, n2)
-        console.log('두 숫자의 합 : '+ result)
+//         let result = addNumber(n1, n2)
+//         console.log('두 숫자의 합 : '+ result)
 
         
-        function addNumber(){
-            let n1 = parseInt(prompt("정수입력"))
-            let n2 = parseInt(prompt("정수입력"))
-            return console.log(n1 + n2); 
+//         function addNumber(){
+//             let n1 = parseInt(prompt("정수입력"))
+//             let n2 = parseInt(prompt("정수입력"))
+//             return console.log(n1 + n2); 
             
-        }
-        addNumber();
+//         }
+//         addNumber();
 
 
 
-        // 준우
+        // // 준우
 
-                // 두 정수를 입력받은 후 합을 반환하는 addNumber()
+        //         // 두 정수를 입력받은 후 합을 반환하는 addNumber()
 
-        // 1. 두 정수를 입력받기
-        let num1 = parseInt(prompt("첫번째수"));
-        let num2 = parseInt(prompt("두번째수"));
+        // // 1. 두 정수를 입력받기
+        // let num1 = parseInt(prompt("첫번째수"));
+        // let num2 = parseInt(prompt("두번째수"));
 
-        // 2. 전달받은 두 정수를 더한 결과 반환
-        function addNumber1(){
-            let add = num1+num2
-            console.log(${num1}+${num2} = ${num1+num2});
-        }
-        addNumber1();
+        // // 2. 전달받은 두 정수를 더한 결과 반환
+        // function addNumber1(){
+        //     let add = num1+num2
+        //     console.log(${num1}+${num2} = ${num1+num2});
+        // }
+        // addNumber1();
 
-        // 3. 반환된 결과를 다시 변수에 담은 후 출력
-        const addNumber = function(n1,n2) {
-            return n1+n2;
-        }
-        let result = addNumber(num1,num2);
-        console.log("두 수의 합", result);
+        // // 3. 반환된 결과를 다시 변수에 담은 후 출력
+        // const addNumber = function(n1,n2) {
+        //     return n1+n2;
+        // }
+        // let result = addNumber(num1,num2);
+        // console.log("두 수의 합", result);
 
 
-        // 
+        // // 
 
-        const addNumber2 = (num1,num2) => {
-            console.log(${num1}+${num2} = ${num1+num2});
-        }
-        addNumber2(num1,num2);
+        // const addNumber2 = (num1,num2) => {
+        //     console.log(${num1}+${num2} = ${num1+num2});
+        // }
+        // addNumber2(num1,num2);
 
 
     </script>

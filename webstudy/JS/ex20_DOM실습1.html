@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">클릭 한번 해볼까요?</h1>
+    <div id="google"></div>
+    <div id="ul"></div>
+    <button id="btn-1">h1내용변경</button>
+    <button id="btn-2">a태그생성</button>
+    <button id="btn-3">ul태그생성</button>
+
+    <script>
+      // 1. 태그를 자바스크립트로 가져오기
+      const tit = document.getElementById("tit");
+      const btn1 = document.getElementById("btn-1");
+      const btn2 = document.getElementById("btn-2");
+      const btn3 = document.getElementById("btn-3");
+      // 2. 클릭 이벤트 정의
+      // 2-1. 1번버튼 클릭: h1 태그의 내용(텍스트) 변경
+      btn1.addEventListener("click", function () {
+        tit.textContent = "내용변경성공";
+      });
+
+      // 2-2. 2번버튼 클릭: a 태그 추가 (기존 태그 유지)
+      //      실제 구글로 이동할 수 있도록 src 달기
+      btn2.addEventListener("click", function () {
+        tit.innerHTML += "<br><a href='http://www.google.com'>google이동</a>";
+      });
+
+      // 2-3. 3번버튼 클릭 : ul태그 추가 (ul 안 li도 적용되어야 함)
+      btn3.addEventListener("click", function () {
+        let result = "";
+        result += "<ul>";
+        result += "<li>HTML</li>";
+        result += "<li>CSS</li>";
+        result += "<li>JS</li>";
+        result += "<ul>";
+
+        tit.innerHTML += result;
+      });
+
+      //    let h1 = document.getElementById("title")
+      //    console.log(h1.innerHTML);
+      //    let button1 = document.getElementById("btn-1")
+      //    button1.addEventListener("click", function(){
+      //        h1.innerHTML = "<h1>아니요</h1><br>"
+      //    })
+      //
+      //
+      //    document.getElementById("btn-2").addEventListener("click", function() {
+      //        google.innerHTML = '<a href="https://www.google.com/?hl=ko">구글로가보쟈</a>'
+      //    });
+      //
+      //    document.getElementById("btn-3").addEventListener("click", function() {
+      //        ul.innerHTML = '<ul><li>HTML</li><li>CSS</li><li>JS</li></ul>'
+      //    })
+    </script>
+  </body>
+</html>

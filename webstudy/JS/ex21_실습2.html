@@ -7,8 +7,30 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="num">0</p>
+    <button id="btn-1">증가</button>
+    <button id="btn-2">감소</button>
     <script>
-    
+        // 증가 버튼 눌렀을 때 p태그의 0에 +1
+        // 감소
+        let res = parseInt(document.getElementById("num").innerHTML)
+        console.log(res);
+        const btn_1 = document.getElementById("btn-1")
+        const btn_2 = document.getElementById("btn-2")
+
+        btn_1.addEventListener("click", function(){
+            res+=1
+            num.innerHTML = res
+            console.log(res);
+        })
+
+        btn_2.addEventListener("click", function(){
+            res-=1
+            num.innerHTML = res
+            console.log(res);
+        })
+
+
     </script>
 </body>
 </html>

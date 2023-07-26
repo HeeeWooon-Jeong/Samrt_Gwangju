@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="title">클릭 한번 해볼까요?</h1>
+    <button id="btn-1">h1내용변경</button>
+    <button id="btn-2">a태그생성</button>
+    <button id="btn-3">ul태그생성</button>
+
+    <script>
+
+
+      const btn1 = document.getElementById("btn-1");
+      const btn2 = document.getElementById("btn-2");
+      const btn3 = document.getElementById("btn-3");
+        let heewoon = {
+            "name" : "ㅎㅇ",
+            "age" : 30,
+            "info" : function(){
+                console.log(heewoon.name)
+            }
+        }
+
+        console.log(heewoon);
+
+        console.log(heewoon.name);
+
+        heewoon.info()
+
+        heewoon.age = 30
+
+        // 태그 통째로 가져오기
+        const tit = document.getElementById("title");
+        console.log(tit);
+        
+        // 변수.innerHTML 속성이 적용된 채
+        // 변수.textContent 태그가 문자열로 출력됨
+
+
+
+
+        btn.addEventListener("click", function(){
+            alert("클릭이벤트 발생!")
+        })
+
+        // 두번째 클릭에 다시 원래 내용으로 돌아오는 법
+        btn1.addEventListener("click", function(){
+            tit.textContent = "내용변경성공"
+        })
+
+        btn2.addEventListener("click", function () {
+            tit.innerHTML += "<br><a href='http://www.google.com'>google이동</a>"
+        })
+
+        btn3.addEventListener("click", function () {
+            tit.innerHTML += '<ul><li>HTML</li><li>CSS</li><li>JS</li></ul>'
+        })
+
+
+
+
+
+
+    </script>
+</body>
+</html>

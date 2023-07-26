@@ -16,14 +16,16 @@
 
     <script>
       // 1. 태그를 자바스크립트로 가져오기
-      const tit = document.getElementById("tit");
+      const tit = document.getElementById("title");
       const btn1 = document.getElementById("btn-1");
       const btn2 = document.getElementById("btn-2");
       const btn3 = document.getElementById("btn-3");
       // 2. 클릭 이벤트 정의
       // 2-1. 1번버튼 클릭: h1 태그의 내용(텍스트) 변경
       btn1.addEventListener("click", function () {
-        tit.textContent = "내용변경성공";
+        // tit.textContent = "내용변경성공";
+        tit.innerHTML = "내용변경성공";
+        // 기능은 똑같다
       });
 
       // 2-2. 2번버튼 클릭: a 태그 추가 (기존 태그 유지)

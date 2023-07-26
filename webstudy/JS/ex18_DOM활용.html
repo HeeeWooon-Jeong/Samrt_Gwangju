@@ -20,13 +20,14 @@
         // p태그의 전체내용 접근
         console.log(msg.innerHTML);
 
+        console.log(document.getElementById("msg").innerHTML);
         // p태그의 내용을 변경
         // msg.innerHTML = "<h1>내용변경완료</h1>" // h1속성이 적용된다
-        msg.innerHTML += "<h3추가되나요~?</h3>"
+        msg.innerHTML += "<h3>대입연산</h3>"
             
 
 
-        // msg.textContent = "<h1>내용변경완료</h1>"  // <h></h1>이라는 문자열로 나온다.
+        // msg.textContent = "<h1>내용변경완료</h1>"  // <h1></h1>이라는 문자열로 나온다.
 
 
 

@@ -56,4 +56,34 @@
 		where id = #{id}
 		and pw = #{pw}
 	</select>
+	
+	<update id="update" parameterType="com.smhrd.entity.Member">
+		UPDATE MEMBER
+		
+		SET 
+		pw = #{pw},
+		tel = #{tel}
+		
+		WHERE id= #{id}
+	</update>
+
+<!-- 	
+	<update id="update" parameterType="com.smhrd.entity.Member">
+		update member
+		set pw = #{pw},
+			tel = #{tel},
+			gender = #{gender}
+			
+		where id = #{id} 
+		 where 없으면 모든 정보 수정해버림 
+			
+	</update>
+	-->
+	
+	<delete id="delete" parameterType="com.smhrd.entity.Member">
+		delete from member
+		where id= ${id},
+			  pw= ${pw} 
+		
+	</delete>
 </mapper>

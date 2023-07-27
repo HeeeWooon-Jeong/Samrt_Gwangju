@@ -30,8 +30,8 @@
 		<li> <a href="goLogin">로그인</a> </li>
 		<% }else{%>
 		<li> <a href="logout">로그아웃</a> </li>
-		<li> <a href="#">회원정보수정</a> </li>
-		<li> <a href="#">회원탈퇴</a> </li>
+		<li> <a href="goUpdate">회원정보수정</a> </li>
+		<li> <a href="goDelete">회원탈퇴</a> </li>
 		<li> <a href="#">회원목록</a> </li>
 		<% }%>
 		

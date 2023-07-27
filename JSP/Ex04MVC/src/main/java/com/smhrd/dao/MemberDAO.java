@@ -44,13 +44,34 @@ public class MemberDAO {
 		// 2. sql문 실행
 		// selectOne : 결과가 한개만 나올 때
 		//			   >> resultType에 적은 DTO로 리턴
-		// selectAll : 결과가 여러개 나올 때
+		// selectList : 결과가 여러개 나올 때
 		//			   >> List<DTO>
 		
 		Member result = session.selectOne("login", member);
 		// 3. 연결 반납
 		session.close();
 		// 4. 실행 결과 리턴
+		return result;
+	}
+	
+	// 업데이트 메서드
+	public int update(Member member) {
+		SqlSession seesion = factory.openSession(true);
+		
+		int result = seesion.update("update", member);
+		
+		seesion.close();
+		
+		return result;
+	}
+	
+	public int delete(Member member) {
+		SqlSession session = factory.openSession(true);
+		
+		int result = session.delete("delete", member);
+		
+		session.close();
+		
 		return result;
 	}
 	

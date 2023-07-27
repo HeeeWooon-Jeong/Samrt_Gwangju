@@ -8,29 +8,89 @@
 </head>
 <body>
     <p id="num">0</p>
-    <button id="btn-1">증가</button>
-    <button id="btn-2">감소</button>
+    <button id="btn-plus" oneclick="plusNumber()">증가</button>
+    <button id="btn-minus">감소</button>
     <script>
-        // 증가 버튼 눌렀을 때 p태그의 0에 +1
-        // 감소
-        let res = parseInt(document.getElementById("num").innerHTML)
-        console.log(res);
-        const btn_1 = document.getElementById("btn-1")
-        const btn_2 = document.getElementById("btn-2")
+        // // 증가 버튼 눌렀을 때 p태그의 0에 +1
+        // // 감소
+        // let res = parseInt(document.getElementById("num").innerHTML)
+        // console.log(res);
+        // const btn_1 = document.getElementById("btn-1")
+        // const btn_2 = document.getElementById("btn-2")
+        // const num = document.getElementById("num")
+        
+        
+        // btnPlus.addEventListener("click", pulsNumber)
 
-        btn_1.addEventListener("click", function(){
-            res+=1
-            num.innerHTML = res
-            console.log(res);
-        })
+        // // 이벤트 핸들러에 함수를 인자로 넘길 때는 함수 호출을 의미하는 ()를 붙이지 않는다
+        // btn_1.addEventListener("click", function(){
+        //     console.log(res);
+        //     res+=1
+        //     num.innerHTML = res
+        // })
 
-        btn_2.addEventListener("click", function(){
-            res-=1
-            num.innerHTML = res
-            console.log(res);
-        })
+        // btn_2.addEventListener("click", function(){
+            
+        //     if(res>0){
+        //     res-=1
+        //     num.innerHTML = res
+        //     console.log(res);
+        //     }else{
+        //         console.log(res)
+        //     num.innerHTML = res
+        //     }
+
+        // })
 
 
+
+        
+      // 증가 버튼 눌렀을 때 P태그의 0에 +1 ...
+      // 감소 버튼 눌렀을 때는 1씩 감소
+
+      // 1. 내가 변경할 요소들을 가져오기
+      //    p태그, 증가/감소버튼
+      let num = document.getElementById("num");
+      let btnPlus = document.getElementById("btn-plus");
+      let btnMinus = document.getElementById("btn-minus");
+
+      const plusNumber = function () {
+         let n = Number(num.textContent);
+         console.log(n);
+         n += 1;
+         num.textContent = n;
+      }
+
+      const minusNumber = function () {
+         let n = Number(num.textContent);
+         if (n > 0) {
+            n -= 1;
+         }
+         num.textContent = n;
+         }
+        
+
+    //   btnPlus.addEventListener("click", plusNumber);
+    //   btnMinus.addEventListener("click", minusNumber);
+
+      // 2. 증가 버튼 로직 -> 클릭했을 때, p태그 안의 숫자를 +1 해주기 (이벤트함수)
+      // 이벤트 핸들러에 함수를 인자로 넘길 때는 함수 호출을 의미하는 ()를 붙이지 않는다.
+      // ()를 붙여버리면 자바스크립트 엔진이 "어? 함수다! 실행~" 해버림
+      // 3. 감소 버튼 로직 -> 클릭했을 때, p태그 안의 숫자를 -1 해주기
+      // -----------------------------------------------------------
+      // 4. 감소 할 때, 0 밑으로는 내려가지 않게 해주기
+
+
+
+
+            // 1. 이벤트핸들러 : 특정 이벤트가 발생했을 때 처리하는 함수
+        // 요소.addEventListener("이벤트종류",이벤트핸들러함수);
+        // ex1. btn1.addEventlistener("click", function(){로직});
+        // ex2. const addNumber = function(){로직}
+        //      btn1.addEventlistener("click", addNumber);
+
+             // 2. onclick 
+        // html 시작태그에 onclick="함수이름()" 형태로 작성
     </script>
 </body>
 </html>

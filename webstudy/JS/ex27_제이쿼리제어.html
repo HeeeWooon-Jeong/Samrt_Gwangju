@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>배고파요..</h1>
+    <script src="../code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script>
+        // 제이쿼리를 사용하려면 항상 import 해주기
+
+        // h1태그를 가지고 와보자! (접근)
+        console.log($('h1').html()); 
+        console.log($('h1').text());
+
+        // 내용을 바꿀 때는 소괄호 안에 바꿀 내용을 적어주자
+
+        $("h1").html("<h5>간식먹어요~</h5>")
+
+        // h1태그의 스타일을 제어해보자!
+        $('h1').css("color", "green")
+
+        // 다중 스타일 제어 
+        $('h1').css({
+            color : 'blue',
+            // font-size = fontSize 카멜로 해야함
+            fontSize : '100px',
+            fontFamily : '굴림'
+        })
+
+
+        // 메서드 체인
+        // 메서드 체인에는 객체형태가 아니기 때문에 카멜식이 아니더라도 적용 됨
+        $('h1').html('큐브 더워요~').css("color", 'red').css('fontSize', '굴림')
+        console.log('h1');
+
+
+    </script>
+</body>
+</html>

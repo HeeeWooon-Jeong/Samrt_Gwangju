@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      img {
+         width: 300px;
+      }
+   </style>
+</head>
+<body>
+   <input type="text">
+   <button>추가</button>
+   <div></div>
+
+   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+   <script>
+      // 사용자의 입력값이 '해달'면 해달 사진을 input 태그 아래에 추가
+      // '수달'면 수달 사진을 추가
+      // 하지만 사진은 제일 최근에 추가한 사진이 위로 오게!
+
+      let img1 = 'https://mblogthumb-phinf.pstatic.net/MjAxOTExMDhfMjYw/MDAxNTczMjAxOTM1MzY5.S3zKV2zpuUaa0tc8ItmGL_h5m0CVrtmYZxsOUc_ihA0g.aaQ_rpUcCyrw6ur8oa8XJbHFPFl2xrweecEdUu6GtLYg.JPEG.naverschool/GettyImages-1162414574.jpg?type=w800';
+
+      let img2 = 'https://www.sisaweek.com/news/photo/202004/132716_121857_70.jpg';
+
+      $('button').on("click", function(){
+         if($('input').prop('value') == '수달') {
+            $('div').prepend(`<img src='${img1}'>`);
+         } else if($('input').prop('value') == '해달') {
+            $('div').prepend(`<img src='${img2}'>`);
+         }
+      }) 
+
+
+   </script>
+</body>
+</html>

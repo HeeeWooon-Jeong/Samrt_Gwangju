@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text">
+        <button id="btn-1">입력!</button>
+        <br>
+        <div id="resultA"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    
+
+
+    <script>
+        // 1. 제이쿼리 로드
+        // 2. 사용자가 input태그에 입력한 값을 출력! (버튼을 클릭했을 때!)
+        $('button').on('click', function () {
+            // *.prop() => property
+            // 선택한 요소의 속성을 가져오는 메서드
+            // 사용법은 attr()과 동일하다!
+            
+            console.log($('input').prop("value"))
+            
+            let result =''
+            // 3. 버튼이 클릭되면 input태그 안의 값도 비우기!
+            result += '<h3>'
+                result +=$('input').prop('value')
+                result += '</h3>'
+                
+                $('#resultA').html(result)
+            $('input').prop('value','')
+            
+
+        })
+        // 4. resultA라는 div공간에 h3태그로 하나씩 추가시키기
+        
+        
+
+        /*
+        <script>
+            //1. 제이쿼리 로드하기
+            //2. 사용자가 input태그에 입력한 값을 출력! (버튼을 클릭했을 때!)
+            $('button').on('click', function(){
+                let result='';
+                
+                // * .prop() => property
+         // 선택한 요소의 속성을 가져오는 메소드
+         // 사용법은 attr() 과 동일하다!
+         let value= $('input').prop('value');
+         
+         //4. 사용자의 입력값은 resultA라는 div공간에 h3태그로 하나씩 추가시키기
+         result += '<h3>';
+            result += value ;
+            result += '</h3>';
+            $('#resultA').html(result);
+            
+            //3. 버튼이 클릭되면 input태그 안의 값도 비우기!
+            $('input').prop('value','');
+        })
+        
+        */
+    </script> 
+       
+       
+       
+       
+       
+       
+       
+       
+    </script>
+</body>
+</html>

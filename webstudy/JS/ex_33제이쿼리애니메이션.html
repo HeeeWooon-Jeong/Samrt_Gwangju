@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            border: 1px dotted red;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <button >애니메이션 효과!</button>
+    <h1>오늘도 참 덥다</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyrs-K3g2I7utfGbEp8VZmEjG9GXLaFlxJeA&usqp=CAU" alt="">
+
+    <script>
+        // 애니메이션 효과 활용해보기
+        // 1) h1태그에 마우스를 올렸을 때 애니메이션 이벤트 처리
+        $('h1').on('mouseover', function () {
+            // animate({바꾸고 싶은 css 속성값}, 지속시간, (이징종류))
+            // 이징종류는 없어도 무방 디폴트 값은 : swing
+            $(this).animate({
+                'color' : 'blue',
+                'font-size': '30px',
+                'border-width' : '4px'
+            }, 3000)
+        })
+
+        // 2) 버튼을 클릭했을 때 이미지 크게 보여주기
+        $('button').on('click', function(){
+            $('img').animate({
+                'width' : '50%'
+            }, 1500)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div id="parent">
+      <h1 id="me">기준!</h1>
+   </div>
+
+
+   <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+   <script>
+      // before() : 대상 앞에 (외부) 추가
+      // prepend() : 대상 앞에 (내부) 추가
+      // after() : 대상 뒤에 (외부) 추가
+      // append() : 대상 뒤에 (내부) 투가
+
+      `
+      before
+      <h1>
+         prepend
+         대상
+         append
+      </h1>
+      after
+      `
+
+
+      $('#me').before('before');
+      $('#me').after('after');
+      $('#me').prepend('prepend');
+      $('#me').append('append');
+   </script>
+</body>
+</html>

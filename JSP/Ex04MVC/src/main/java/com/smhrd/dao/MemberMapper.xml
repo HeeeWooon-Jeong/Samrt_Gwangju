@@ -82,8 +82,15 @@
 	
 	<delete id="delete" parameterType="com.smhrd.entity.Member">
 		delete from member
-		where id= ${id},
-			  pw= ${pw} 
+		where id= #{id}
+		and	  pw= #{pw} 
 		
 	</delete>
+	
+	
+	<!--  result 타입 필수  -->
+	<!--  #{}를 쓰지 않기때문에 parameterType은 필요없음 -->
+	<select id="list" resultType="com.smhrd.entity.Member">
+		select * from MEMBER
+	</select>
 </mapper>

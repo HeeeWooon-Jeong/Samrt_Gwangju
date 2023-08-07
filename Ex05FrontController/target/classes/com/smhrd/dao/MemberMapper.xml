@@ -1,96 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.dao.MemberDAO">
-<!-- Mapper는 DAO와 짝 : namespace 속성으로 짝꿍 DAO가 누군지 알려주어야한다. -->
 
-<!-- 
-	Mybatis
-	기존 jdbc : java 코드 + SQL >> SQL문이 String 타입, 유지보수 힘들고
-			   복잡한 SQL문을 사용하기 힘듦
-			   실행결과를 가공하는 별도의 코드 추가되어 작업양이 많음
-    MyBatis  : java 코드와 SQL문을 분리
-    		   DAO(java) <-mapping-> Mapper(SQL문 정의)> 
-    		   
--->
-<!-- 
-	Mapper = 태그 안의 SQL문을 정의 / 태그 이름 == 사용하고자 하는 SQL문의 키워드
- -->
- 
- <!-- #{변수명} 해당하는 자리에 변수값을 집어넣어줌
-    여기선 필드 변수명 
- 	  각 태그에 id 처럼 태그의 필수 속성들을 잘 정의해야함
- 	  insert, delete, update : 
- 	  		id - 
- 	  		parameterType - 어떤 DTO로 묶어서 데이터를 넣어주는지
- 	  		 
- 	  		아래에서는 5개의 자료형을 묶어서 DTO로 보내게 된다 
- -->
-	 <insert id="join" parameterType="com.smhrd.entity.Member">
-	 	insert into MEMBER
-	 	values(
-	 		#{id},
-	 		#{pw},
-	 		#{gender},
-	 		#{nick},
-	 		#{tel}
-	 	)
-	 </insert>
+<!-- Mapper는 DAO와 짝 : namespace 속성으로 짝꿍 DAO가 누군지 알려주어야 한다. -->
 
-	<!--  
-		Login
-		
-		select 필수 속성
-		resultType : 조회결과를 어떤 데이터 타입으로 변환해서 받을지(한 행 기준)
-					 MyBatis에서는 조회결과를 자동으로 변환
-					 
-					 
-					 결과 1개 >> DTO 
-					 결과 여러개 >> List<DTO>
-					 조건)
-					 	1. table column명 == DTO 필드 변수명이 같아야만 한다
-					 	2. DTO에 기본생성자가 존재해야함
-					 	3. setter 메서드가 존재해야함
-	 -->
-	<select id="login" parameterType="com.smhrd.entity.Member" resultType="com.smhrd.entity.Member">
-		select * from MEMBER
-		where id = #{id}
-		and pw = #{pw}
-	</select>
+<!-- Mybatis 프레임워크
+	 기존 jdbc : java 코드 + SQL >> SQL문이 String 타입, 유지보수 힘들고
+	            복잡한 SQL문을 사용하기 힘듦
+	            실행결과를 가공하는 별도의 코드 추가되어 작업 양이 많음.
+	 MyBatis : java 코드와 SQL 문을 분리
+	           DAO(java) <-mapping-> Mapper(SQL문 정의)  -->
+	           
+<!-- Mapper : 태그 안에 SQL문을 정의 / 태그 이름 == 사용하고자 하는 SQL문의 키워드 
+	 
+	 #{필드변수명} : 해당하는 자리에 변수 값을 집어넣어 준다. 자료형 구분 자동 
+	 태그의 필수 속성들을 잘 정의해야 함 
+	 insert, delete, update : 
+	 id - 
+	 parameterType - 어떤 DTO로 묶어서 데이터를 넣어주는지 -->
+
+	<insert id="join" parameterType="com.smhrd.entity.Member">
+		insert into MEMBER
+		values(
+			#{id},
+			#{pw},
+			#{gender},
+			#{nick},
+			#{tel}
+		)
+	</insert>	   
 	
-	<update id="update" parameterType="com.smhrd.entity.Member">
-		UPDATE MEMBER
-		
-		SET 
-		pw = #{pw},
-		tel = #{tel}
-		
-		WHERE id= #{id}
-	</update>
+	<!-- select 필수 속성
+		 resultType : 조회결과를 어떤 데이터 타입으로 변환해서 받을지(한 행)
+		 			  MyBatis에서는 조회결과를 자동으로 변환
+		 			  결과 1개 >> DTO
+		 			  결과 여러개 >> List<DTO> 
+		 			  조건) 
+		 			  		1. table column명 == DTO 필드 변수명 
+		 			        2. DTO에 기본생성자가 존재해야 함 
+		 			        3. setter 메소드가 존재해야 함--> 
+	
+	<select id="login" parameterType="com.smhrd.entity.Member"
+	 resultType="com.smhrd.entity.Member">
+	
+		select * from MEMBER where id = #{id} and pw = #{pw}
+	
+	</select>      	 
 
-<!-- 	
+
 	<update id="update" parameterType="com.smhrd.entity.Member">
-		update member
-		set pw = #{pw},
-			tel = #{tel},
-			gender = #{gender}
-			
-		where id = #{id} 
-		 where 없으면 모든 정보 수정해버림 
-			
+	
+		update MEMBER 
+		set pw = #{pw}, 
+			gender = #{gender}, 
+			tel = #{tel}
+	  where id = #{id}
+	
 	</update>
-	-->
 	
 	<delete id="delete" parameterType="com.smhrd.entity.Member">
-		delete from member
-		where id= #{id}
-		and	  pw= #{pw} 
 		
+		delete from MEMBER where id = #{id} and pw = #{pw}
+	
 	</delete>
 	
-	
-	<!--  result 타입 필수  -->
-	<!--  #{}를 쓰지 않기때문에 parameterType은 필요없음 -->
 	<select id="list" resultType="com.smhrd.entity.Member">
+	
 		select * from MEMBER
+	
 	</select>
+
+
+
+
+
+
+
+
+
+
 </mapper>

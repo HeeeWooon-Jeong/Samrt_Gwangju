@@ -7,11 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>로그인</h1>
-	<form action="Login" method="post">
-		ID : <input type="text" name="id"> <br>
-		PW : <input type="password" name="pw"> <br>
-		<input type="submit" value="로그인">
-	</form>
+
+   <h1>로그인</h1>
+   <form action="login.do" method="post">
+      ID : <input type="text" name="id"> <br>
+      PW : <input type="password" name="pw"> <br>
+      <input type="submit" value="로그인">   
+   </form>
+
 </body>
 </html>
